@@ -6,6 +6,8 @@ import com.example.headhunterfromaliexpress.App
 import com.example.search.di.SearchModule
 import com.example.search.di.ViewModelModule
 import com.example.search.ui.SearchFragment
+import com.example.search.ui.SearchListFragment
+import com.example.search.ui.VacanciesListFragment
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjectionModule
@@ -33,4 +35,8 @@ interface AppComponent {
     fun inject(application: App)
 
     fun inject(searchFragment: SearchFragment)
+
+    fun inject(searchListFragment: SearchListFragment)
+
+    fun inject(vacanciesListFragment: VacanciesListFragment)
 }

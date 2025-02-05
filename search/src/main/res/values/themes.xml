@@ -19,7 +19,7 @@
     </style>
 
     <style name="FavIcon" parent="Widget.Material3.Button.IconButton">
-        <item name="iconTint">#287EFE</item>
+        <item name="iconTint">@color/blue</item>
     </style>
 
     <style name="ResponseButton" parent="Widget.Material3.Button">
@@ -29,9 +29,14 @@
     </style>
 
     <style name="MoreButton" parent="Widget.Material3.Button">
-        <item name="backgroundTint">#287EFE</item>
+        <item name="backgroundTint">@color/blue</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">14sp</item>
         <item name="cornerRadius">8dp</item>
+    </style>
+
+    <style name="SortButton" parent="Widget.Material3.Button.TextButton">
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:textSize">14sp</item>
     </style>
 </resources>

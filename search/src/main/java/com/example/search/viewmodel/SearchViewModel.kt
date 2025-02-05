@@ -11,16 +11,12 @@ import javax.inject.Inject
 class SearchViewModel @Inject constructor(
     private val searchRepository: SearchRepository
 ) : ViewModel() {
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is Search Fragment"
-    }
-    val text: LiveData<String> = _text
 
     private val _vacancies = MutableLiveData<List<Vacancy>>()
-    val vacancies = _vacancies.value
+    val vacancies: LiveData<List<Vacancy>> = _vacancies
 
     private val _offers = MutableLiveData<List<Offer>>()
-    val offers = _offers.value
+    val offers: LiveData<List<Offer>> = _offers
 
     suspend fun loadVacancies() {
         _vacancies.value = searchRepository.getVacancies()

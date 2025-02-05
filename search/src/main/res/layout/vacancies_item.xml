@@ -13,13 +13,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="#015905"
-        android:text="@string/looking_now"
+        android:text=""
         android:textSize="14sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/is_fav_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -33,7 +33,7 @@
 
     <TextView
         android:id="@+id/vac_title"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
         android:text="@string/vac_title"
@@ -41,6 +41,7 @@
         android:textColor="@color/white"
         app:layout_constraintTop_toBottomOf="@id/looking_now"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/is_fav_btn"
         />
 
     <TextView
