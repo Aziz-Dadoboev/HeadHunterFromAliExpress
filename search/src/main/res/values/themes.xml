@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppButton" parent="Widget.Material3.Button.IconButton">
+        <item name="iconTint">@color/button_white</item>
+        <item name="backgroundTint">@color/bg_gray</item>
+        <item name="cornerRadius">10dp</item>
+    </style>
+
+    <style name="AppEditText" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundColor">@color/bg_gray</item>
+        <item name="boxBackgroundMode">filled</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+        <item name="android:padding">0dp</item>
+        <item name="boxCornerRadiusTopStart">8dp</item>
+        <item name="boxCornerRadiusTopEnd">8dp</item>
+        <item name="boxCornerRadiusBottomStart">8dp</item>
+        <item name="boxCornerRadiusBottomEnd">8dp</item>
+    </style>
+
+    <style name="FavIcon" parent="Widget.Material3.Button.IconButton">
+        <item name="iconTint">#287EFE</item>
+    </style>
+
+    <style name="ResponseButton" parent="Widget.Material3.Button">
+        <item name="android:backgroundTint">@color/green</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="MoreButton" parent="Widget.Material3.Button">
+        <item name="backgroundTint">#287EFE</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
+</resources>

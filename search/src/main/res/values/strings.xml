@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="search_hint">Должность, ключевые слова</string>
+    <string name="filter_btn">Filter</string>
+    <string name="search_field">Search field</string>
+    <string name="offers">Вакансии рядом с вами</string>
+    <string name="vacancies_title">Вакансии для вас</string>
+    <string name="more_vacancies">Еще 143 вакансий</string>
+    <string name="looking_now">Сейчас просматривает 1 человек</string>
+    <string name="favorite">Избранное</string>
+    <string name="vac_title">UI/UX Designer</string>
+    <string name="vac_town">Минск</string>
+    <string name="vac_company">Мобирикс</string>
+    <string name="vac_experience">Опыт от 1 года до 3 лет</string>
+    <string name="vac_date">Опубликовано 20 февраля</string>
+    <string name="response">Откликнуться</string>
+</resources>
