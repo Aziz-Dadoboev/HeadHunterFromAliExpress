@@ -1,13 +1,14 @@
 package com.example.headhunterfromaliexpress
 
 import android.os.Bundle
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
+import androidx.appcompat.app.AppCompatDelegate
+import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.headhunterfromaliexpress.databinding.ActivityMainBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,13 +16,28 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
         supportActionBar?.hide()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
+        var navHostFragment = supportFragmentManager.findFragmentByTag("NavHost")
+                as? NavHostFragment
+
+        if (navHostFragment == null) {
+            navHostFragment = NavHostFragment.create(R.navigation.mobile_navigation)
+
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.nav_host_container, navHostFragment, "NavHost")
+                .setPrimaryNavigationFragment(navHostFragment)
+                .commit()
+            supportFragmentManager.executePendingTransactions()
+        }
+
         val navView: BottomNavigationView = binding.navView
 
-        val navController = findNavController(R.id.nav_host_fragment_activity_main)
+        val navController = navHostFragment.navController
         val appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.navigation_search,

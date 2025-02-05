@@ -3,10 +3,26 @@ package com.example.search.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.search.data.Offer
+import com.example.search.data.Vacancy
+import com.example.search.repository.SearchRepository
+import javax.inject.Inject
 
-class SearchViewModel : ViewModel() {
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is Search Fragment"
+class SearchViewModel @Inject constructor(
+    private val searchRepository: SearchRepository
+) : ViewModel() {
+
+    private val _vacancies = MutableLiveData<List<Vacancy>>()
+    val vacancies: LiveData<List<Vacancy>> = _vacancies
+
+    private val _offers = MutableLiveData<List<Offer>>()
+    val offers: LiveData<List<Offer>> = _offers
+
+    suspend fun loadVacancies() {
+        _vacancies.value = searchRepository.getVacancies()
     }
-    val text: LiveData<String> = _text
+
+    suspend fun loadOffers() {
+        _offers.value = searchRepository.getOffers()
+    }
 }

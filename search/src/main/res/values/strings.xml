@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="search_hint">Должность, ключевые слова</string>
+    <string name="filter_btn">Filter</string>
+    <string name="search_field">Search field</string>
+    <string name="offers">Вакансии рядом с вами</string>
+    <string name="vacancies_title">Вакансии для вас</string>
+    <plurals name="more_vacancies">
+        <item quantity="one">Еще %1$d вакансия</item>
+        <item quantity="few">Еще %1$d вакансии</item>
+        <item quantity="many">Еще %1$d вакансий</item>
+        <item quantity="other">Еще %1$d вакансий</item>
+    </plurals>
+    <plurals name="looking_now">
+        <item quantity="one">Сейчас просматривает %1$d человек</item>
+        <item quantity="few">Сейчас просматривает %1$d человека</item>
+        <item quantity="many">Сейчас просматривает %1$d человек</item>
+        <item quantity="other">Сейчас просматривает %1$d человек</item>
+    </plurals>
+    <string name="favorite">Избранное</string>
+    <string name="vac_title">UI/UX Designer</string>
+    <string name="vac_town">Минск</string>
+    <string name="vac_company">Мобирикс</string>
+    <string name="vac_experience">Опыт от 1 года до 3 лет</string>
+    <string name="vac_date">Опубликовано 20 февраля</string>
+    <string name="response">Откликнуться</string>
+    <string name="sort">По соответствию</string>
+    <plurals name="vacancies_count">
+        <item quantity="one">%1$d вакансия</item>
+        <item quantity="few">%1$d вакансии</item>
+        <item quantity="many">%1$d вакансий</item>
+        <item quantity="other">%1$d вакансий</item>
+    </plurals>
+
+</resources>
